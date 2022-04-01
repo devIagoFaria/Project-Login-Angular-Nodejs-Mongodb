@@ -61,7 +61,7 @@ function valitationToken (req, res, next){
 
     console.log(token)
 
-    allow = jwt.verify(token, 'segredo')
+    allow = jwt.verify(token, secret)
 
     console.log('Allow:', allow)
 
