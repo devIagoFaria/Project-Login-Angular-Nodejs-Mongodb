@@ -1,0 +1,183 @@
+body{
+    background-color: rgb(241, 239, 239);
+}
+#menu{
+    
+    background-color: rgb(241, 239, 239);
+    animation-duration: 3s;
+    /* animation-name: menu; */
+    width:259px;
+    height: 100%;
+
+   
+}
+#menuFixed{
+    background-color: rgb(241, 239, 239);
+    width: 190px;
+    height: 150%;
+    animation-duration: 3s;
+    /* animation-name: fixed; */
+   
+}
+
+.bg-tema{
+    background-color: #002fa7;
+}
+
+.buttonPortal{
+
+    text-align: left;
+    transition: 0.5s;
+    font-weight: bold;
+    color: rgba(0,0,0,0.5);
+}
+.iconsPortal{
+    font-size: 22px;
+    transform: translateY(20%);
+}
+.buttonPortal:hover{
+    
+    
+    background-color: #d1d1d3;
+    color: rgba(0,0,0,0.8);
+}
+
+.buttonPortal:focus{
+    box-shadow: 0px 0px 0px;
+}
+
+button{
+    list-style: none;
+}
+.buttonDrop{
+    border-radius: 0px;
+    font-size: 15px;
+    background-color: rgb(241, 239, 239);
+    text-align:left;
+    font-weight: bold;
+    color: rgba(0,0,0,0.5);
+
+}
+.buttonDrop li{
+    margin-left: 30px;
+    padding: 5px;
+
+}
+.buttonDrop:focus{
+    box-shadow: 0px 0px 0px;
+}
+.buttonDrop:hover{
+    background-color: #d1d1d3;
+    color: rgba(0,0,0,0.8);
+}
+
+
+.pesquisacliente{
+    border: none;
+    background-color: white;
+    color: rgb(0, 138, 230);
+    
+}
+
+.pesquisacliente:hover{
+    background-color: white;
+    color: rgb(0, 138, 230);
+    text-decoration: underline;
+}
+
+table a:hover{
+   text-decoration: none;
+}
+
+.inputOS{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 10px;
+ 
+}
+
+.inputOS input{
+    width: 100px;
+
+}
+
+.inputOSTwo{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    
+   
+}
+
+.inputOSTwo button{
+   margin-top: 20px;
+   
+}
+
+.inputOSTwoB{
+    display: none;
+   padding: 10px;
+   
+}
+
+.inputOSThree{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+}
+.inputOSFour{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+}
+.list-client-OS{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(29, 29, 29,0.5);
+}
+
+.list-client-OS-div{
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+.list-client-OS-divtwo{
+    background-color: white;
+    height: 200px;
+    overflow: auto;
+}
+.list-client-OS-divtwo td,.list-client-OS-divtwo th {
+    padding-left: 20px;
+}
+.buttonAddTable{
+    color: rgb(36, 104, 250)
+
+}
+.buttonAddTable:hover{
+    color: rgb(6, 59, 173);
+    text-decoration: underline;
+
+}
+.detalhes{
+    color: rgb(0, 138, 230);
+}
+.detalhes:hover{
+    color: rgb(0, 138, 230);
+    text-decoration: underline;
+}
+
+.divPortal{
+    border: solid 1px rgba(0,0,0,0.2);
+
+}

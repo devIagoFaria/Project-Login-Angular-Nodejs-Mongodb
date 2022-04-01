@@ -1,0 +1,35 @@
+
+
+
+<section >
+  <div class="container">
+    <div style="text-align: center; margin-bottom: 10px;">
+      <img src="assets/LOGO.png" width="100px" >
+    </div>
+   
+    <form #loginForm="ngForm"  (ngSubmit)="login(loginForm)">
+      <div >
+        <input  type="text" name="user" ngModel  aria-describedby="emailHelp" placeholder="Email ID">
+      </div>
+  
+      <div>
+        <input type="password" ngModel name="password" placeholder="Password">
+  
+        <div *ngIf="invalid" style=" padding: 10px;">
+          <span style="font-size: 14px; color: rgb(255, 0, 0);">{{invalid}}</span>
+        </div>
+
+        <div *ngIf="!invalid" style="padding: 20px;">
+        </div>
+      </div>
+  
+      <button>LOGIN</button>
+  
+  
+  
+    </form>
+  
+  </div>
+
+</section>
+

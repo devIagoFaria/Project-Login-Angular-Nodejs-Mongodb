@@ -1,0 +1,143 @@
+
+
+    <div class="d-flex flex-row bd-highlight" style="height:700px">
+        <div class="" style="position: relative;" id="menu">
+    
+
+            <div class="" style="position: fixed;
+            height: 100vh;" id="menuFixed">
+                <h1 class="mt-3 p-3" style="color: rgba(0,0,0,0.5); text-align: center;">CLS</h1>
+            <hr>
+                
+                <a routerLink="/admin"><button class="btn w-100 buttonPortal"><i class="material-icons iconsPortal mr-2 ">home</i> Visão Geral</button></a>
+                <button class="btn w-100 buttonPortal" onclick="OpenDiv('divClient')"><i class="material-icons iconsPortal mr-2">person</i> Clientes</button>
+                <div id="divClient"  style="display: none; padding-top: 5px;">
+                    <a href="/admin/form-client"><button class="btn btn-sm w-100 buttonDrop "><li><i class="material-icons iconsPortal mr-2">group_add</i> Adicionar Cliente</li></button></a>
+                    <a href="/admin/list-client"><button class="btn btn-sm w-100 buttonDrop "><li><i class="material-icons iconsPortal mr-2">group</i> Lista de Clientes</li></button></a>
+              
+              
+                </div>
+                <button class="btn w-100 buttonPortal" onclick="OpenDiv('divOS')"><i class="material-icons iconsPortal mr-2" >build</i> Ordem de Serviço</button>
+                <div id="divOS" style="display: none; padding-top: 10px;">
+                    
+                    <a href="/admin/form-OS"><button class="btn btn-sm w-100 buttonDrop "><li><i class="material-icons iconsPortal mr-2" >add</i> Adicionar O.S</li></button></a>
+                   <a href="/admin/OS-pendentes"> <button class="btn btn-sm w-100 buttonDrop"><li><i class="material-icons iconsPortal mr-2" > query_builder</i> O.S Pendentes</li></button></a>
+                   <a href="/admin/OS-finalizadas"><button class="btn btn-sm  w-100 buttonDrop"><li><i class="material-icons iconsPortal mr-2" >check</i>O.S Finalizadas</li></button></a>
+                   <a href="/admin/OS-retornadas"><button class="btn btn-sm w-100 buttonDrop"><li><i class="material-icons iconsPortal mr-2" >keyboard_return</i>O.S Retornadas</li></button></a>
+                </div>
+          
+               
+                <a href="" *ngIf="admin"><button class="btn w-100 buttonPortal"><i class="material-icons iconsPortal mr-2">person_add</i> Cadastrar Novo Membro</button></a>
+                <hr>
+                <a (click)="logout()"><button class="btn w-100 buttonPortal"><i class="material-icons iconsPortal mr-2">exit_to_app</i>Sair</button></a>
+            
+             
+            
+            </div>
+        
+        </div>
+
+        <div class="container">
+            <div class="d-flex flex-row ">
+                <div class="d-flex w-100 m-2 p-5 divPortal" style="background-color: white;">
+                  <div class="w-100 " >
+                      <h4 class="display-4" style="font-size: 25px;">Bem vindo, {{user}}!</h4>
+                     
+                      
+                  </div>
+                </div>
+          
+  
+                 
+      
+              </div>
+            <div class="d-flex flex-row mt-5 h-50">
+                <div class="d-flex  w-100 h-100">
+                    <div class="w-100 m-2 p-3 divPortal" style="background-color: white;">
+                        <h4 class="text-center display-4" style="font-size: 30px;">ORDEM DE SERVIÇO</h4>
+                        <br>
+                   
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td scope="col"></td>
+                                    <th scope="col" class="p-4" style="color: deepskyblue;" ></th>
+                                  </tr>  
+                              <tr>
+                                <td scope="col">Ordem de serviços pendentes</td>
+                                <th scope="col" style="color: red;">15</th>
+                              </tr>
+                              <tr>
+                                <td scope="col">Ordem de serviços retornadas</td>
+                                <th scope="col" style="color: red;">10</th>
+                              </tr>
+                              <tr>
+                                <td scope="col">Ordem de serviços finalizadas nesse mês</td>
+                                <th scope="col"style="color: deepskyblue;" id="OSMounth">5</th>
+                              </tr>
+                              <tr>
+                                <td scope="col">Ordem de serviços finalizadas mês passado</td>
+                                <th scope="col"style="color: deepskyblue;" id="OSLastmounth">8</th>
+                              </tr>
+                              <tr>
+                                <td scope="col">Taxa de crescimento mensal de serviço</td>
+                                <th scope="col"style="color: rgb(1, 245, 0);" id="TdOS">+00.00</th>
+                              </tr>
+                              
+                            </tbody>
+                           
+                          </table>
+
+                    </div>
+                </div>
+                
+                <div class="d-flex  w-100 h-100">
+                  <div class="w-100 m-2 p-3 divPortal" style="background-color: white;">
+                      <h4 class="text-center display-4" style="font-size: 30px;">CLIENTES</h4>
+                      <br>
+                      
+                  
+                      <table class="table">
+                          <tbody>
+                            <tr>
+                              <td scope="col"></td>
+                              <th scope="col" class="p-4" style="color: deepskyblue;" ></th>
+                            </tr>
+                            <tr>
+                              <td scope="col">Clientes cadastrados no mês atual</td>
+                              <th scope="col" style="color: deepskyblue;" id="mounthClient">30</th>
+                            </tr>
+                            <tr>
+                              <td scope="col">Clientes cadastrados no mês passado</td>
+                              <th scope="col" style="color: deepskyblue;" id="lastMounthClient">40</th>
+                            </tr>
+                          
+                            <tr>
+                              <td scope="col">Total de clientes cadastrados</td>
+                              <th scope="col"style="color: deepskyblue;">150</th>
+                            </tr>
+                        
+                            <tr>
+                              <td scope="col ">Taxa de crescimento mensal dos clientes</td>
+                              <th scope="col"style="color: rgb(1, 245, 0);" id="TdC">+00.00</th>
+                            </tr>
+                          </tbody>
+                         
+                        </table>
+
+                  </div>
+           
+                </div>
+               
+    
+            </div>
+
+
+
+        </div>
+       
+        
+      
+     
+
+    </div>
